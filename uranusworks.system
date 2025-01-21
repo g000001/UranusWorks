@@ -1,0 +1,24 @@
+;;; -*- mode: Lisp; coding: utf-8  -*-
+
+(cl:in-package :defsystem)
+
+
+(setf (logical-pathname-translations "uranusworks")
+      `(("**;*.*.*" ,(merge-pathnames (pathname "**/*.*") *load-pathname*))))
+
+
+(defsystem uranusworks
+  (:default-host uranusworks 
+   :default-type :lisp-file)
+  :members ("uranus-mode"
+            "uranus-fontlock"
+            "uranus-indent"
+            "uranus-file"))
+
+
+
+
+
+
+
+
